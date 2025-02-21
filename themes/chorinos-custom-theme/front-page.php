@@ -1,12 +1,16 @@
 <?php get_header();
 
-while (have_posts()) {
-    the_post(); ?>
-    <div class="container-sm">
-    <h2><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
-    <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-    <hr>
-    </div>
-<?php }
+$categories = get_categories();
+    
+if (!empty($categories)) {
+    echo '<div class="container-sm mt-5 mb-5 list-group text-center">';
+    foreach ($categories as $category) {
+        echo '<a href="' . get_category_link($category->term_id) . '" class="list-group-item list-group-item-action">' . $category->name . ' (' . $category->count . ')</a>';
+    }
+    echo '</div>';
+} else {
+    echo 'No categories found.';
+}
+
 
 get_footer(); ?>
