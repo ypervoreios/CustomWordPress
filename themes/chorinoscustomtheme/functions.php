@@ -12,3 +12,11 @@ function customThemeSupport() {
     add_theme_support('title-tag');
 }
 add_action('after_setup_theme', 'customThemeSupport');
+
+function my_custom_menus() {
+    register_nav_menus([
+        'primary-menu' => __('Primary Menu', 'textdomain'),
+        'footer-menu' => __('Footer Menu', 'textdomain')
+    ]);
+}
+add_action('after_setup_theme', 'my_custom_menus');
