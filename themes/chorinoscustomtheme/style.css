@@ -9,9 +9,9 @@ Text Domain: chorinoscustomtheme
 .main-menu ul {
     list-style: none; /* Remove bullet points */
     padding: 0;
-    margin: 0;
+    margin: 20px 0 20px 0;
     display: flex; /* Arrange items in a row */
-    self-align: center; /* Center align the items */
+    justify-content: center; /* Center align the items */
 }
 
 .main-menu ul li {
