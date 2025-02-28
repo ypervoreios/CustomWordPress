@@ -6,14 +6,14 @@
     <?php wp_head();?>
 </head>
 <div class="container-sm">
-  <p class="h1 text-center"><?php bloginfo('name'); ?></p>
-  <p class="h5 text-center"><?php bloginfo('description'); ?></p>
-</div>
+<header class="container-sm">
+  <p class="h1"><?php bloginfo('name'); ?></p>
+  <p class="h5"><?php bloginfo('description'); ?></p>
+</header>
   <div class="container-sm">
-    <div class="row">
       <nav class="main-menu">
       <?php wp_nav_menu( array('theme_location' => 'primary-menu')) ?>
       </nav>
-    </div>
   </div>
-  
+  </div>  
+  <body>

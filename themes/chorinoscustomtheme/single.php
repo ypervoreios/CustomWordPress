@@ -1,5 +1,5 @@
-<?php get_header();
-
+<?php get_header(); ?>
+<?php
 while (have_posts()) {
     the_post(); ?>
     <div class="container-sm mb-5 mt-5">
@@ -9,5 +9,6 @@ while (have_posts()) {
                 </div>
     </div>
 <?php }
+?>
 
-get_footer();?>
+<?php get_footer();?>

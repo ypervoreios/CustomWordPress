@@ -6,12 +6,60 @@ Version: 1.0.0
 Text Domain: chorinoscustomtheme
 */
 
+header {
+  justify-content: center;
+  text-align: center;
+  border-radius: 5px;
+  padding: 20px 0px 20px 0px;
+  background-color: #b3c1c5;
+  margin: 50px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #e6e6e2;
+}
+
+footer {
+  padding: 20px 0px 20px 0px;
+  margin-top: 50px;
+  background-color: #0c2c48;
+  border-radius: 5px;
+  color: white;
+}
+
+footer a {
+    color: #ee6c4d;
+    text-decoration: none;
+}
+
+footer a:visited {
+    color: #ee6c4d;
+}
+
+a {
+  text-decoration: none;
+}
+
+div {
+  background-color: #e6e6e2;
+}
+
+.col-sm-8 {
+ 	justify-content: center;
+  align-items: center;
+}
+
 .main-menu ul {
     list-style: none; /* Remove bullet points */
     padding: 0;
     margin: 20px 0 20px 0;
-    display: flex; /* Arrange items in a row */
-    justify-content: center; /* Center align the items */
+ 		display: flex;
+  	flex-wrap: wrap;
+  	justify-content: center;
 }
 
 .main-menu ul li {
@@ -20,20 +68,21 @@ Text Domain: chorinoscustomtheme
 
 .main-menu ul li a {
     text-decoration: none;
-    color: #fff; /* Set text color */
+    color: #fff;
     background-color: #0073aa;
     padding: 10px 15px;
-    display: block;
-    border-radius: 5px; /* Rounded corners */
+    display: flex;
+    border-radius: 5px;
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .main-menu ul li a:hover {
-    color:rgb(1, 78, 114); /* Change color on hover */
+    color:rgb(1, 78, 114);
 }
 
 .main-menu ul li.current-menu-item a {
-    background-color: #ff6600; /* Change to your preferred highlight color */
+    background-color: #ee6c4d; /* Change to your preferred highlight color */
     color: #333;
+    font-weight: bold;
     //transform: scale(1.1);
 }
