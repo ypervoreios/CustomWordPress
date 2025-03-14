@@ -10,6 +10,7 @@ while (have_posts()) {
         <div class="latest-post glass">
             <a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
             <p><?php echo wp_trim_words(get_the_excerpt(), 20); ?></p>
+            <a href="<?php the_permalink(); ?>" class="btn btn-secondary">Read More</a>
         </div>
 <?php }
 ?>

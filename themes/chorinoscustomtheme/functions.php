@@ -16,6 +16,8 @@ add_action('after_setup_theme', 'customThemeSupport');
 function my_custom_menus() {
     register_nav_menus([
         'primary-menu' => __('Primary Menu', 'textdomain'),
+        'top-menu-left' => __('Top Menu Left', 'textdomain'),
+        'top-menu-right' => __('Top Menu Right', 'textdomain'),
         'footer-menu' => __('Footer Menu', 'textdomain')
     ]);
 }
@@ -77,3 +79,13 @@ function custom_event_taxonomy() {
     register_taxonomy( 'event_category', array( 'event' ), $args );
 }
 add_action( 'init', 'custom_event_taxonomy' );
+
+function custom_logo_setup() {
+    add_theme_support('custom-logo', array(
+        'height'      => 100,
+        'width'       => 400,
+        'flex-height' => true,
+        'flex-width'  => true,
+    ));
+}
+add_action('after_setup_theme', 'custom_logo_setup');

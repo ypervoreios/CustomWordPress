@@ -86,7 +86,7 @@ a {
 .main-menu ul li a {
     text-decoration: none;
     color: #fff;
-    background-color: #0073aa;
+    background-color:  #0073aa;
     padding: 10px 15px;
     display: flex;
     border-radius: 5px;
@@ -95,13 +95,13 @@ a {
 
 .main-menu ul li a:hover {
     color:rgb(1, 78, 114);
+    transform: scale(1.1);
 }
 
 .main-menu ul li.current-menu-item a {
     background-color: #ee6c4d; /* Change to your preferred highlight color */
     color: #333;
     font-weight: bold;
-    //transform: scale(1.1);
 }
 
 .glass {
@@ -190,6 +190,11 @@ a {
   background-color: rgba(255, 255, 255, 0.05);
 }
 
+.card-title {
+  color: #bb86fc;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
 .card-title a {
   color: #bb86fc;
 }
@@ -224,4 +229,46 @@ a {
 
 .entry-content {
   color: #03dac6;
+  }
+
+  .top-menu {
+    position: absolute;
+    top: 0;
+    width: calc(50% - 20px);
+    height: 30px;
+    background: #333;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    spacing-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .top-menu ul {
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  .top-menu a {
+    color: white;
+    text-decoration: none;
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+
+  .top-menu li::after {
+    content: "|";
+  }
+
+  .top-menu li:last-child::after {
+    content: "";
+  }
+
+  .top-menu a:hover {
+    color: #ff9800;
   }

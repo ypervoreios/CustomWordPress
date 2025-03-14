@@ -6,12 +6,39 @@
     <?php wp_head();?>
 </head>
 <header>
-  <p class="h1"><?php bloginfo('name'); ?></p>
-  <p class="h5"><?php bloginfo('description'); ?></p>
-  <div class="container-sm">
+<div class="container-fluid">
+<div class="row">
+      <div class="col-md-6">
+        <div class="top-menu justify-content-start">
+        <?php wp_nav_menu( array('theme_location' => 'top-menu-left')) ?>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="top-menu justify-content-end">
+        <?php wp_nav_menu( array('theme_location' => 'top-menu-right')) ?>
+        </div>
+      </div>
+  </div>
+<div class="row mt-5">
+  <div class="col-md-12 text-center">
+  <h1><?php bloginfo('name'); ?></h1>
+  <p><?php bloginfo('description'); ?></p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+  <?php
+if (function_exists('the_custom_logo')) {
+    the_custom_logo();
+}
+?>
+  </div>
+  <div class="col-md-6">
       <nav class="main-menu">
       <?php wp_nav_menu( array('theme_location' => 'primary-menu')) ?>
       </nav>
+  </div>
+  </div>
   </div>
 </header>
   <body>

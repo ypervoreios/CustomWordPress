@@ -20,12 +20,13 @@ Template Name: Event Categories
         if (!empty($categories)) {
             foreach ($categories as $category) {
                 echo '
-                  
+                  <a href="' . get_term_link($category) . '">
                 <div class="my-card glass">
                     <h5 class="card-title">
-                        <a href="' . get_term_link($category) . '">' . $category->name . '</a>
+                        ' . $category->name . '
                     </h5>
-                </div>';
+                </div>
+                </a>';
             }
         } else {
             echo '<p>No categories found.</p>';
