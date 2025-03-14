@@ -10,13 +10,12 @@
     <?php if ( have_posts() ) : ?>
             <?php while ( have_posts() ) : the_post(); ?>
             
-               <div class="container-sm list-group text-center">
-                    
-                        <a href="<?php the_permalink(); ?>" class="list-group-item list-group-item-action"><?php the_title(); ?></a>
+               <div class="latest-post">
+                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </div>
             <?php endwhile; ?>
     <?php else : ?>
-        <p>No books found in this category.</p>
+        <p>No events found in this category.</p>
     <?php endif; ?>
  
 </main>

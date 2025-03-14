@@ -1,7 +1,7 @@
 <?php
 function customScripts() {
     wp_enqueue_style('bootstrap-style', get_theme_file_uri('/css/bootstrap.css'));
-    wp_enqueue_style('font-awesome-style', get_theme_file_uri('/css/font-awesome.min.css'));
+    //wp_enqueue_style('font-awesome-style', get_theme_file_uri('/css/font-awesome.min.css'));
     wp_enqueue_script('bootstrap-script', get_theme_file_uri('/js/bootstrap.bundle.min.js'));
     wp_enqueue_style('chorinos-custom-theme-style', get_stylesheet_uri());
 }

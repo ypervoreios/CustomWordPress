@@ -1,14 +1,16 @@
+<?php get_header(); ?>
 <?php
 /*
 Template Name: Event Categories
 */
-get_header();
+
 ?>
-<div class="container text-center">
-<main>
+<div class="container-sm text-center">
     <h1>All Event Categories</h1>
+    <h2>This is a custom taxonomy</h2>
+</div>
     <hr>
-    <div class="row g-2">
+    <div class="ch-container mt-5 mb-5">
         <?php
         $categories = get_terms(array(
             'taxonomy'   => 'event_category',
@@ -17,19 +19,19 @@ get_header();
 
         if (!empty($categories)) {
             foreach ($categories as $category) {
-                echo '<div class="col-6">
-                <div class="p-3">
-                  <div class="card"><h5 class="card-title">
-                  <a href="' . get_term_link($category) . '">' . $category->name . '</a></h5>
-                </div>
-                </div>
+                echo '
+                  
+                <div class="my-card glass">
+                    <h5 class="card-title">
+                        <a href="' . get_term_link($category) . '">' . $category->name . '</a>
+                    </h5>
                 </div>';
             }
         } else {
             echo '<p>No categories found.</p>';
         }
         ?>
-        </div>
-</main>
+    </div>
+
 </div>
 <?php get_footer(); ?>
