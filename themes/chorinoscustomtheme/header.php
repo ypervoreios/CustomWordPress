@@ -26,14 +26,14 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-md-6 justify-content-start">
   <?php
 if (function_exists('the_custom_logo')) {
     the_custom_logo();
 }
 ?>
   </div>
-  <div class="col-md-6">
+  <div class="col-md-6 justify-content-end">
       <nav class="main-menu">
       <?php wp_nav_menu( array('theme_location' => 'primary-menu')) ?>
       </nav>
